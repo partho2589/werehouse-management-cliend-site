@@ -1,0 +1,27 @@
+#from-container{
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 20px;
+}
+.from-title{
+    text-align: center;
+   color: rgb(92, 236, 241);
+}
+.from-btn{
+    background-color: rgb(103, 236, 170);
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: 600;
+    
+}
+
+/* @media only screen and (max-width:567) {
+    #from-container{
+        border: none;
+        padding: 0%;
+
+    }
+    .from-title{
+        font-size: 20px;
+    }
+} */
