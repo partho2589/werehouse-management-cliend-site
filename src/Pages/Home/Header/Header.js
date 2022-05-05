@@ -2,13 +2,13 @@ import React from 'react';
 import './Header.css'
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import logo from '../../../image/logo.png'
+import icon from '../../../image/icon.png'
 const Header = () => {
     return (
         <Navbar className='navbar' collapseOnSelect expand="lg" variant="dark">
   <Container>
   <Navbar.Brand>
-      <img src={logo} alt="" />
+      <img className='icon' src={icon} alt="" />
   </Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
