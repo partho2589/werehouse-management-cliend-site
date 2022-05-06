@@ -4,6 +4,7 @@ import './App.css';
 import About from './Pages/About/About';
 import Header from './Pages/Home/Header/Header';
 import Home from './Pages/Home/Home/Home';
+
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import Social from './Pages/Login/Social/Social';
@@ -20,7 +21,6 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path ='/register' element={<Register></Register>}></Route>
         <Route path='/social' element={<Social></Social>}></Route>
-
       </Routes>
       <Footer></Footer>
     </div>
