@@ -23,7 +23,7 @@ const Register = () => {
                    Register
                 </Button>
             </Form>
-            <p>New to Fruits werehoues? <Link to='/login' className='text-primary pe-auto text-decoration-none'>Please Login</Link></p>
+            <p>New to Fruits warehouse? <Link to='/login' className='text-primary pe-auto text-decoration-none'>Please Login</Link></p>
         </div>
     );
 };
