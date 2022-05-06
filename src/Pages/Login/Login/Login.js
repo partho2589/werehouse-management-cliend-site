@@ -2,6 +2,7 @@ import React from 'react';
 import './Login.css'
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Social from '../Social/Social';
 
 const Login = () => {
     return (
@@ -16,11 +17,12 @@ const Login = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" placeholder="Password" required/>
                 </Form.Group>
-                <Button className=' from-btn' variant="" type="submit">
+                <Button className=' from-btn mb-2' variant="" type="submit">
                    Login
                 </Button>
             </Form>
             <p>New to Fruits werehoues? <Link to='/register' className='text-primary pe-auto text-decoration-none'>Please Register</Link></p>
+            <Social></Social>
         </div>
     );
 };

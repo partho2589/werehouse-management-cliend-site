@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import icon from '../../../image/icon.png'
 const Header = () => {
     return (
-        <Navbar className='navbar' collapseOnSelect expand="lg" variant="dark">
+        <Navbar sticky='top' className='navbar' collapseOnSelect expand="lg" variant="dark">
   <Container>
   <Navbar.Brand>
       <img className='icon' src={icon} alt="" />
