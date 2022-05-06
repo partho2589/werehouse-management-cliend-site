@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Dates",
+        "price": 300,
+        "description": "",
+        "img": "https://ibb.co/5hbgDz4"
+    },
+    {
+        "name": "Apple",
+        "price": 200,
+        "description": "",
+        "img": "https://ibb.co/Rj0WqF8"
+    },
+    {
+        "name": "Grapes",
+        "price": 250,
+        "description": "",
+        "img": "https://ibb.co/FKppCTg"
+    },
+    {
+        "name": "Mango",
+        "price": 400,
+        "description": "",
+        "img": "https://ibb.co/FKppCTghttps://ibb.co/1sfddr3"
+    },
+    {
+        "name": "Orange",
+        "price": 100,
+        "description": "",
+        "img": "https://ibb.co/r47hRzJ"
+    },
+    {
+        "name": "Pineapple",
+        "price": 150,
+        "description": "",
+        "img": "https://ibb.co/Xy7pq4Q"
+    }
+]
