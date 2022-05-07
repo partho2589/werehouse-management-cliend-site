@@ -5,3 +5,8 @@
     width: 20px;
     height: 20px;
 }
+.signOut-btn{
+    background-color:rgba(41, 46, 95, 0.993) ;
+    border: none;
+    color: white;
+}
