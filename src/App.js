@@ -2,6 +2,8 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './Pages/About/About';
+import Add from './Pages/Add/Add';
+import Blog from './Pages/Blog/Blog';
 import Header from './Pages/Home/Header/Header';
 import Home from './Pages/Home/Home/Home';
 
@@ -19,14 +21,20 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/about' element={
           <RequireAuth>
             <About></About>
           </RequireAuth>
         }></Route>
+        <Route path='/add' element={
+          <RequireAuth>
+            <Add></Add>
+          </RequireAuth>
+        }></Route>
         <Route path='/login' element={<Login></Login>}></Route>
-        
-        <Route path ='/register' element={<Register></Register>}></Route>
+
+        <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/social' element={<Social></Social>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>

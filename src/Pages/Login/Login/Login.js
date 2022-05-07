@@ -3,6 +3,7 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../../Share/Loading/Loading';
 import './Login.css'
 
 const Login = () => {
@@ -52,7 +53,7 @@ const Login = () => {
                     </div>
                     <p style={{ color: 'red' }}>{error?.message}</p>
                     {
-                        loading && <p>Loading...</p>
+                        loading && <Loading></Loading>
                     }
                     <input className='from-submit w-50 mx-auto d-block' type="submit" value="Login" />
                 </form>
