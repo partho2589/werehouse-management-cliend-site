@@ -2,7 +2,6 @@ import React from 'react';
 import './Social.css'
 import googleIcon from '../../../image/icon/google-icon.png'
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
-
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 const Social = () => {
@@ -33,7 +32,7 @@ const Social = () => {
             </div>
             <div>
                 <button
-                onClick={() => signInWithGoogle}
+                    onClick={()=>signInWithGoogle()}
                    id='google-btn'
                     className=' w-50 d-block mx-auto'>
                     <img src={googleIcon} alt="" />

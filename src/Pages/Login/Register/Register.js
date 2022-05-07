@@ -1,29 +1,73 @@
-import React from 'react';
-import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
+import Social from '../Social/Social';
 
 const Register = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [error, setError] = useState('');
+    const navigate = useNavigate();
+
+    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth)
+
+    const handleEmailBlur = event => {
+        setEmail(event.target.value);
+    }
+
+    const handlePasswordBlur = event => {
+        setPassword(event.target.value);
+    }
+
+    const handleConfirmPasswordBlur = event => {
+        setConfirmPassword(event.target.value);
+    }
+
+    if (user) {
+        navigate('/home');
+    }
+
+    const handleCreateUser = event => {
+        event.preventDefault();
+        if (password !== confirmPassword) {
+            setError('Your two passwords did not match');
+            return;
+        }
+        if (password.length < 6) {
+            setError('Password must be 6 characters or longer');
+            return;
+        }
+
+        createUserWithEmailAndPassword(email, password);
+    }
+
     return (
-        <div id='from-container'  className=' container w-50 mx-auto mt-5 b'>
-            <h3 className='from-title'>Please Register</h3>
-            <Form>
-                <Form.Group className="mb-3 " controlId="formBasicEmail">
-                    <Form.Label>Name</Form.Label>
-                    <Form.Control type="text" placeholder="Enter Name"  />
-                </Form.Group>
-                <Form.Group className="mb-3 " controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" required />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" required/>
-                </Form.Group>
-                <Button className=' from-btn mb-2' variant="" type="submit">
-                   Register
-                </Button>
-            </Form>
-            <p>New to Fruits warehouse? <Link to='/login' className='text-primary pe-auto text-decoration-none'>Please Login</Link></p>
+        <div className='form-container'>
+            <div>
+                <h2 className='form-title'>Sign Up</h2>
+                <form onSubmit={handleCreateUser}>
+                    <div className="input-group">
+                        <label htmlFor="email">Email</label>
+                        <input onBlur={handleEmailBlur} type="email" name="email" id="" required />
+                    </div>
+                    <div className="input-group">
+                        <label htmlFor="password">Password</label>
+                        <input onBlur={handlePasswordBlur} type="password" name="password" id="" required />
+                    </div>
+                    <div className="input-group">
+                        <label htmlFor="confirm-password">Confirm Password</label>
+                        <input onBlur={handleConfirmPasswordBlur} type="password" name="confirm-password" id="" />
+                    </div>
+                    <p style={{ color: 'red' }}>{error}</p>
+                    <input className='from-submit' type="submit" value="Sign Up" required />
+                </form>
+                <p>
+                    Already Have an account? <Link className='form-link' to="/login">Login</Link>
+                </p>
+                <Social></Social>
+            </div>
         </div>
     );
 };
