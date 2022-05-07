@@ -1,0 +1,14 @@
+.manage-link{
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+    padding: 10px 30px;
+    
+    
+    
+    background-color:rgb(103, 236, 170) ;
+}
