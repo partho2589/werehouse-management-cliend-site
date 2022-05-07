@@ -11,19 +11,18 @@ const ProductDetail = () => {
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [])
-    console.log(product)
     const { _id, name, img, price, description, quantity, supplier } = product;
     return (
-        <div className=' products-container container'>
-
-            <div id='product' className='row '>
-                <img height={200} className='img-fluid mb-3' src={img} alt="" />
+        <div >
+            <div  className=' row w-50 mx-auto '>
+                <img height={200} className='img-fluid mb-3 ' src={img} alt="" />
                 <h3>Name: {name}</h3>
-                <h4>Supplier:{supplier}</h4>
+                <h4>Supplier: {supplier}</h4>
                 <h5>Price: ${price}</h5>
                 <p>{description}</p>
-                <p> <span>Quantity:{quantity}</span></p>
-                <button className='from-btn'>Up Date</button>
+                <p> <span>Quantity: {quantity}</span></p>
+                <p><small>Id: {_id}</small></p>
+                <button className='from-btn'>Delivered</button>
             </div>
             
         </div>

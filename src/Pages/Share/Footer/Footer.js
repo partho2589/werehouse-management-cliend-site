@@ -4,7 +4,7 @@ const Footer = () => {
    const today = new Date();
    const year = today.getFullYear();
     return (
-        <div className='footer-container'>
+        <div className='footer-container '>
             <p className='text-center mx-auto '>CopyRight Pure Fruit WereHouse {year}</p>
         </div>
     );

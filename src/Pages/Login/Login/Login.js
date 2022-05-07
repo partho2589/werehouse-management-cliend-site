@@ -30,7 +30,7 @@ const Login = () => {
     }
 
     if (user) {
-        navigate("/home");
+        navigate(from , {replace:true});
     }
 
     const handleUserSignIn = event => {
