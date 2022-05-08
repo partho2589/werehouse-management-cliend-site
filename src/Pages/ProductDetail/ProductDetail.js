@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import './ProductDetail.css'
 const ProductDetail = () => {
     const { productId } = useParams()
@@ -12,9 +12,10 @@ const ProductDetail = () => {
             .then(data => setProduct(data))
     }, [])
     const { _id, name, img, price, description, quantity, supplier } = product;
+    
     return (
         <div >
-            <div  className=' row w-50 mx-auto '>
+            <div className=' row w-50 mx-auto '>
                 <img height={200} className='img-fluid mb-3 ' src={img} alt="" />
                 <h3>Name: {name}</h3>
                 <h4>Supplier: {supplier}</h4>
@@ -24,7 +25,9 @@ const ProductDetail = () => {
                 <p><small>Id: {_id}</small></p>
                 <button className='from-btn'>Delivered</button>
             </div>
-            
+            <div className=' mt-5 d-flex align-items-center justify-content-center'>
+                <Link className='manage-link ' to='/manage'> Manage Item</Link>
+            </div>
         </div>
     );
 };
