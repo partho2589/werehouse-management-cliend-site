@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Product from '../Home/Product/Product';
 import './Products.css'
-const Products = () => {
+const   Products = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://mysterious-ridge-18976.herokuapp.com/product')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
