@@ -2,7 +2,7 @@
 Pure Fruits warehouse
 
 ## Live website link
-
+https://pure-fruits-werehouse.web.app/manage
 ### Everything that has been done in this project
 * Many pictures have been used.
 * Many routes have been set.
