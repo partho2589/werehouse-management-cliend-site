@@ -1,8 +1,9 @@
 import React from 'react';
 
+
 const Item = (props) => {
     const { _id, name, price, img, quantity, supplier, description } = props.item;
-
+   
     const deleteItem = id =>{
         const proceed = window.confirm('Are You sure you wand to delete item?')
         if(proceed){
@@ -11,7 +12,9 @@ const Item = (props) => {
                 method:'DELETE'
             })
             .then(res => res.json())
-            .then(data=> console.log(data))
+            .then(data=> {
+                    console.log(data)
+                })
         }
     }
     return (

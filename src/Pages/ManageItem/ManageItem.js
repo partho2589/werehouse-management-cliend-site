@@ -8,6 +8,7 @@ const ManageItem = () => {
         fetch('https://mysterious-ridge-18976.herokuapp.com/manage')
             .then(res => res.json())
             .then(data => setManageItem(data))
+            
     }, [])
 
     return (
