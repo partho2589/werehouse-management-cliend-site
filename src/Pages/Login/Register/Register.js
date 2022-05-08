@@ -44,24 +44,24 @@ const Register = () => {
     }
 
     return (
-        <div className='form-container'>
+        <div className='form-container mt-5'>
             <div>
-                <h2 className='form-title'>Sign Up</h2>
+                <h2 className='text-center mt-3'>Please Register</h2>
                 <form onSubmit={handleCreateUser}>
-                    <div className="input-group">
-                        <label htmlFor="email">Email</label>
+                    <div className="input-group ">
+                        <label className='mt-2 me-2' htmlFor="email">Email</label>
                         <input onBlur={handleEmailBlur} type="email" name="email" id="" required />
                     </div>
                     <div className="input-group">
-                        <label htmlFor="password">Password</label>
+                        <label className='mt-2 me-2' htmlFor="password">Password</label>
                         <input onBlur={handlePasswordBlur} type="password" name="password" id="" required />
                     </div>
                     <div className="input-group">
-                        <label htmlFor="confirm-password">Confirm Password</label>
+                        <label className='mt-2 me-2' htmlFor="confirm-password">Confirm Password</label>
                         <input onBlur={handleConfirmPasswordBlur} type="password" name="confirm-password" id="" />
                     </div>
                     <p style={{ color: 'red' }}>{error}</p>
-                    <input className='from-submit' type="submit" value="Sign Up" required />
+                    <input className='from-submit mx-auto w-75 ' type="submit" value="Sign Up" required />
                 </form>
                 <p>
                     Already Have an account? <Link className='form-link' to="/login">Login</Link>
