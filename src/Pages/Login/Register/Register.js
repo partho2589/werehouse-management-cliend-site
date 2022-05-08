@@ -61,7 +61,7 @@ const Register = () => {
                         <input onBlur={handleConfirmPasswordBlur} type="password" name="confirm-password" id="" />
                     </div>
                     <p style={{ color: 'red' }}>{error}</p>
-                    <input className='from-submit mx-auto w-75 ' type="submit" value="Sign Up" required />
+                    <input className='from-submit mx-auto w-75 ' type="submit" value="Register" required />
                 </form>
                 <p>
                     Already Have an account? <Link className='form-link' to="/login">Login</Link>
