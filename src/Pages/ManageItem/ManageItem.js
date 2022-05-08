@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Item from '../Item/Item';
 
 
@@ -8,7 +9,7 @@ const ManageItem = () => {
         fetch('https://mysterious-ridge-18976.herokuapp.com/manage')
             .then(res => res.json())
             .then(data => setManageItem(data))
-            
+
     }, [])
 
     return (
@@ -20,6 +21,10 @@ const ManageItem = () => {
                         item={item}
                     ></Item>)
                 }
+
+            </div>
+            <div className=' mt-5 d-flex  align-items-center justify-content-center'>
+                <Link className='manage-link ' to='/add'> Add Item</Link>
             </div>
         </div>
     );

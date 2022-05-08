@@ -11,6 +11,7 @@ import Register from './Pages/Login/Register/Register';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import Social from './Pages/Login/Social/Social';
 import ManageItem from './Pages/ManageItem/ManageItem';
+import MyItem from './Pages/MyItem/MyItem';
 import ProductDetail from './Pages/ProductDetail/ProductDetail';
 
 import Footer from './Pages/Share/Footer/Footer';
@@ -33,6 +34,7 @@ function App() {
         <Route path='/add' element={ <Add></Add> }></Route>
         <Route path='/manage' element={<ManageItem></ManageItem>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/items' element={<MyItem></MyItem>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/social' element={<Social></Social>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
